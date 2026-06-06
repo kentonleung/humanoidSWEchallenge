@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Agent — Virtual World Visualizer</title>
+    <meta name="description" content="Watch an LLM agent explore and solve tasks in a 2D dungeon world in real-time.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+
+                    <h1>LLM Agent <span class="accent">Visualizer</span></h1>
+                </div>
+                <span class="subtitle">Watch an AI navigate a dungeon world</span>
+            </div>
+            <div class="header-right">
+                <div class="status-badge" id="statusBadge">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="control-group">
+                <label for="taskSelect">Task</label>
+                <select id="taskSelect">
+                    <option value="navigate">Easy: Navigate — Find the red gem</option>
+                    <option value="key_door">Medium: Key & Door — Unlock and reach goal</option>
+                    <option value="dungeon_escape">Hard: Dungeon Escape — Collect all gems</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="providerSelect">LLM Provider</label>
+                <select id="providerSelect">
+                    <option value="gemini">Google Gemini</option>
+                    <option value="anthropic">Anthropic Claude</option>
+                    <option value="openai">OpenAI GPT</option>
+                    <option value="kimi">Moonshot Kimi</option>
+                    <option value="cerebras">Cerebras OSS</option>
+                    <option value="replay" selected>Replay Last Log (Playback)</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="modelInput">Model</label>
+                <input type="text" id="modelInput" placeholder="e.g. gemini-3.5-flash">
+            </div>
+            <div class="control-group">
+                <label for="apiKeyInput">API Key</label>
+                <input type="password" id="apiKeyInput" placeholder="sk-... or env variable">
+            </div>
+            <button class="btn btn-primary" id="startBtn" onclick="startRun()">
+                <span class="btn-icon">▶</span> Start Run
+            </button>
+            <button class="btn" id="soundBtn" onclick="toggleSound()" style="background:#2a2018;color:#e8d8c3;border:1px solid #5a4634;border-radius:3px;">
+                Sound On
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left: World View -->
+            <div class="panel world-panel">
+                <div class="panel-header">
+                    <h2>World View</h2>
+                    <div class="world-info">
+                        <span id="worldName">—</span>
+                        <span class="separator">·</span>
+                        <span id="stepCounter">Step 0/0</span>
+                    </div>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="worldCanvas" width="800" height="500"></canvas>
+                </div>
+                <div class="legend">
+                    <span class="legend-item"><div class="legend-icon agent-icon"></div> Agent</span>
+                    <span class="legend-item"><div class="legend-icon wall-icon"></div> Wall</span>
+                    <span class="legend-item"><div class="legend-icon floor-icon"></div> Floor</span>
+                    <span class="legend-item"><div class="legend-icon water-icon"></div> Water</span>
+                    <span class="legend-item"><div class="legend-icon key-icon">K</div> Key</span>
+                    <span class="legend-item"><div class="legend-icon door-locked-icon"></div> Locked Door</span>
+                    <span class="legend-item"><div class="legend-icon door-open-icon"></div> Open Door</span>
+                    <span class="legend-item"><svg width="12" height="14" viewBox="0 0 12 14" style="vertical-align: middle;"><path fill="#e84393" d="M6 0L12 7L6 14L0 7Z"/></svg> Gem</span>
+                    <span class="legend-item"><div class="legend-icon exit-icon">G</div> Exit</span>
+                    <span class="legend-item"><div class="legend-icon sign-icon">S</div> Sign</span>
+                    <span class="legend-item"><div class="legend-icon weapon-icon">W</div> Sword</span>
+                    <span class="legend-item"><div class="legend-icon monster-icon">M</div> Monster</span>
+                </div>
+            </div>
+
+            <!-- Right: Agent Mind -->
+            <div class="panel mind-panel">
+                <!-- Task Progress -->
+                <div class="sub-panel" id="taskPanel">
+                    <h3>Task</h3>
+                    <p id="taskDescription" class="task-desc">Select a task and click Start.</p>
+                    <div id="objectivesList" class="objectives"></div>
+                </div>
+
+                <!-- Agent Thinking -->
+                <div class="sub-panel thinking-panel">
+                    <h3>Agent Thinking</h3>
+                    <div id="thinkingContent" class="thinking-content">
+                        <p class="placeholder">Waiting for agent to start...</p>
+                    </div>
+                </div>
+
+                <!-- Action Log -->
+                <div class="sub-panel log-panel">
+                    <h3>Action Log</h3>
+                    <div id="actionLog" class="action-log">
+                        <div class="log-empty">No actions yet.</div>
+                    </div>
+                </div>
+
+                <!-- Inventory -->
+                <div class="sub-panel inventory-panel">
+                    <h3>Inventory</h3>
+                    <div id="inventoryContent" class="inventory-content">
+                        <span class="empty-inv">Empty</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completion Banner -->
+        <div class="completion-banner" id="completionBanner" style="display:none;">
+            <div class="completion-content">
+                <span class="completion-icon" id="completionIcon">[SUCCESS]</span>
+                <div class="completion-text">
+                    <h3 id="completionTitle">Task Complete!</h3>
+                    <p id="completionMessage"></p>
+                </div>
+                <div class="completion-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="statSteps">—</span>
+                        <span class="stat-label">Steps</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="statTime">—</span>
+                        <span class="stat-label">Time</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="statTokens">—</span>
+                        <span class="stat-label">Tokens</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/audio.js?v=3"></script>
+    <script src="/static/app.js?v=3"></script>
+</body>
+</html>

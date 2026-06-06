@@ -1,0 +1,685 @@
+{
+  "task_id": "key_door",
+  "task_description": "Find the blue key, unlock the blue door, and reach the goal marker.",
+  "completed": true,
+  "completion_message": "Excellent! You found the key, unlocked the door, and reached the goal!",
+  "steps_taken": 31,
+  "max_steps": 50,
+  "elapsed_seconds": 45.3,
+  "tokens_used": 38200,
+  "final_inventory": [],
+  "final_position": {
+    "x": 20,
+    "y": 6
+  },
+  "objectives": {
+    "Find the blue key": true,
+    "Unlock the blue door": true,
+    "Reach the Dungeon Exit": true
+  },
+  "log": [
+    {
+      "step": 1,
+      "thinking": "Let me look around to understand my environment. I need to find a blue key and unlock a blue door.",
+      "action": "look",
+      "result": "You look around from position (4, 8).\nYou are in the Starting Room.\nYou are facing north.\nYou can see:\n  - sign (3 tiles north-west)\n  - sword (4 tiles north-west)",
+      "success": true,
+      "agent_position": {
+        "x": 4,
+        "y": 8
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 2,
+      "thinking": "I'm in the Starting Room at (4,8). I can see a sign. I need to head north-east to find the passage. Let me start moving north.",
+      "action": "move north",
+      "result": "You move north. You are now in the Starting Room.",
+      "success": true,
+      "agent_position": {
+        "x": 4,
+        "y": 7
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 3,
+      "thinking": "Moving north. I need to reach the passage to the Key Chamber.",
+      "action": "move north",
+      "result": "You move north. You are now in the Starting Room.",
+      "success": true,
+      "agent_position": {
+        "x": 4,
+        "y": 6
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 4,
+      "thinking": "Continuing north. The passage should be at y=3.",
+      "action": "move north",
+      "result": "You move north. You are now in the Starting Room.",
+      "success": true,
+      "agent_position": {
+        "x": 4,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 5,
+      "thinking": "Getting closer to the passage level. Moving north.",
+      "action": "move north",
+      "result": "You move north. You are now in the Starting Room.",
+      "success": true,
+      "agent_position": {
+        "x": 4,
+        "y": 4
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 6,
+      "thinking": "I'm at y=3 now. I need to go east to reach the passage at x=8.",
+      "action": "move north",
+      "result": "You move north. You are now in the Starting Room.",
+      "success": true,
+      "agent_position": {
+        "x": 4,
+        "y": 3
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 7,
+      "thinking": "Now heading east toward the passage.",
+      "action": "move east",
+      "result": "You move east. You are now in the Starting Room.",
+      "success": true,
+      "agent_position": {
+        "x": 5,
+        "y": 3
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 8,
+      "thinking": "Moving east through the Starting Room.",
+      "action": "move east",
+      "result": "You move east. You are now in the Starting Room.",
+      "success": true,
+      "agent_position": {
+        "x": 6,
+        "y": 3
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 9,
+      "thinking": "Continuing east toward the dividing wall.",
+      "action": "move east",
+      "result": "You move east. You are now in the Starting Room.",
+      "success": true,
+      "agent_position": {
+        "x": 7,
+        "y": 3
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 10,
+      "thinking": "Passing through the wall passage into the Key Chamber.",
+      "action": "move east",
+      "result": "You move east.",
+      "success": true,
+      "agent_position": {
+        "x": 8,
+        "y": 3
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 11,
+      "thinking": "I'm in the Key Chamber now. The blue key should be here somewhere. Let me explore.",
+      "action": "move east",
+      "result": "You move east. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 9,
+        "y": 3
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 12,
+      "thinking": "Searching the Key Chamber. Moving east.",
+      "action": "move east",
+      "result": "You move east. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 10,
+        "y": 3
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 13,
+      "thinking": "Continuing east to search for the key.",
+      "action": "move east",
+      "result": "You move east. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 11,
+        "y": 3
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 14,
+      "thinking": "Now I need to head south to find the key at (12,8). Moving east one more.",
+      "action": "move east",
+      "result": "You move east. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 12,
+        "y": 3
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 15,
+      "thinking": "At (12,3). The key is at (12,8), so I need to go south. Moving south.",
+      "action": "move south",
+      "result": "You move south. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 12,
+        "y": 4
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 16,
+      "thinking": "Heading south toward the key position.",
+      "action": "move south",
+      "result": "You move south. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 12,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 17,
+      "thinking": "Continuing south in the Key Chamber.",
+      "action": "move south",
+      "result": "You move south. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 12,
+        "y": 6
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 18,
+      "thinking": "Getting closer to the key. Moving south.",
+      "action": "move south",
+      "result": "You move south. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 12,
+        "y": 7
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 19,
+      "thinking": "Almost at the key location. Moving south.",
+      "action": "move south",
+      "result": "You move south. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 12,
+        "y": 8
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": false,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 20,
+      "thinking": "I can see the blue key! Let me pick it up.",
+      "action": "pickup blue key",
+      "result": "You pick up the blue key.",
+      "success": true,
+      "agent_position": {
+        "x": 12,
+        "y": 8
+      },
+      "inventory": [
+        "blue key"
+      ],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 21,
+      "thinking": "I have the blue key. Now I need to go to the blue door at (16,6). I'll go north first to y=6.",
+      "action": "move north",
+      "result": "You move north. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 12,
+        "y": 7
+      },
+      "inventory": [
+        "blue key"
+      ],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 22,
+      "thinking": "Moving north toward the door's y-level.",
+      "action": "move north",
+      "result": "You move north. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 12,
+        "y": 6
+      },
+      "inventory": [
+        "blue key"
+      ],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 23,
+      "thinking": "I'm at y=6 now. I need to head east to reach the door at x=16.",
+      "action": "move east",
+      "result": "You move east. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 13,
+        "y": 6
+      },
+      "inventory": [
+        "blue key"
+      ],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 24,
+      "thinking": "Moving east toward the blue door.",
+      "action": "move east",
+      "result": "You move east. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 14,
+        "y": 6
+      },
+      "inventory": [
+        "blue key"
+      ],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 25,
+      "thinking": "Getting closer to the door. Continuing east.",
+      "action": "move east",
+      "result": "You move east. You are now in the Key Chamber.",
+      "success": true,
+      "agent_position": {
+        "x": 15,
+        "y": 6
+      },
+      "inventory": [
+        "blue key"
+      ],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": false,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 26,
+      "thinking": "I can see the blue door to my east! It's locked. Let me use the key on it.",
+      "action": "use blue key on blue door",
+      "result": "You unlock the blue door. It swings open.",
+      "success": true,
+      "agent_position": {
+        "x": 15,
+        "y": 6
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": true,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 27,
+      "thinking": "Excellent! The door is unlocked. Now I need to walk through to the Treasure Room and reach the goal.",
+      "action": "move east",
+      "result": "You move east.",
+      "success": true,
+      "agent_position": {
+        "x": 16,
+        "y": 6
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": true,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 28,
+      "thinking": "Passing through the unlocked door.",
+      "action": "move east",
+      "result": "You move east. You are now in the Treasure Room.",
+      "success": true,
+      "agent_position": {
+        "x": 17,
+        "y": 6
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": true,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 29,
+      "thinking": "In the Treasure Room now. Moving east toward the goal marker.",
+      "action": "move east",
+      "result": "You move east. You are now in the Treasure Room.",
+      "success": true,
+      "agent_position": {
+        "x": 18,
+        "y": 6
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": true,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 30,
+      "thinking": "Continuing east. Getting closer to the goal.",
+      "action": "move east",
+      "result": "You move east. You are now in the Treasure Room.",
+      "success": true,
+      "agent_position": {
+        "x": 19,
+        "y": 6
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": true,
+          "Reach the Dungeon Exit": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 31,
+      "thinking": "I can see the goal marker! Moving east to reach it.",
+      "action": "move east",
+      "result": "You move east. You are now in the Treasure Room.",
+      "success": true,
+      "agent_position": {
+        "x": 20,
+        "y": 6
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Find the blue key": true,
+          "Unlock the blue door": true,
+          "Reach the Dungeon Exit": true
+        },
+        "completed": true,
+        "message": "Excellent! You found the key, unlocked the door, and reached the goal!"
+      }
+    }
+  ]
+}

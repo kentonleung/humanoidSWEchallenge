@@ -1,0 +1,361 @@
+{
+  "task_id": "navigate",
+  "task_description": "Go to the red gem in the East Room and pick it up.",
+  "completed": true,
+  "completion_message": "Congratulations! You found and collected the red gem!",
+  "steps_taken": 16,
+  "max_steps": 30,
+  "elapsed_seconds": 18.7,
+  "tokens_used": 12450,
+  "final_inventory": [
+    "red gem"
+  ],
+  "final_position": {
+    "x": 14,
+    "y": 3
+  },
+  "objectives": {
+    "Reach the East Room": true,
+    "Pick up the red gem": true
+  },
+  "log": [
+    {
+      "step": 1,
+      "observation": "═══ Step 0/100 ═══\n\n[Location] Position (2, 5) in \"West Room\" | Facing north\n\n[Vision — 7×7 local grid]\n+---------------+\n|   # . . . . . |\n|   # . . ! . . |\n|   # . . . . . |\n|   # . @ . . . |\n|   # . . . . . |\n|   # . . . . . |\n|   # . . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • sign — 2 tile(s) north-east\n\n[Navigation / Pathfinding Hints]\n  • red gem — 15 steps away (shortest next move: move east)\n\n[Inventory] empty\n\n[Task]   [✗] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn south, turn east, turn west, look, wait",
+      "thinking": "I'm in the West Room. Let me look around to understand my environment and find the red gem.",
+      "action": "look",
+      "result": "You look around from position (2, 5).\nYou are in the West Room.\nYou are facing north.\nYou can see:\n  - sign (2 tiles north-east)",
+      "success": true,
+      "agent_position": {
+        "x": 2,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": false,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 2,
+      "observation": "═══ Step 1/100 ═══\n\n[Last Action Result] ✓ You look around from position (2, 5).\nYou are in the West Room.\nYou are facing north.\nYou can see:\n  - sign (2 tiles north-east)\n\n[Location] Position (2, 5) in \"West Room\" | Facing north\n\n[Vision — 7×7 local grid]\n+---------------+\n|   # . . . . . |\n|   # . . ! . . |\n|   # . . . . . |\n|   # . @ . . . |\n|   # . . . . . |\n|   # . . . . . |\n|   # . . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • sign — 2 tile(s) north-east\n\n[Navigation / Pathfinding Hints]\n  • red gem — 15 steps away (shortest next move: move east)\n\n[Inventory] empty\n\n[Task]   [✗] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn south, turn east, turn west, look, wait",
+      "thinking": "I can see a sign nearby. I'm in the West Room and need to find the red gem. I should explore. Let me read the sign first.",
+      "action": "move east",
+      "result": "You move east. You are now in the West Room.",
+      "success": true,
+      "agent_position": {
+        "x": 3,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": false,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 3,
+      "observation": "═══ Step 2/100 ═══\n\n[Last Action Result] ✓ You move east. You are now in the West Room.\n\n[Location] Position (3, 5) in \"West Room\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n| # . . . . . . |\n| # . . ! . . . |\n| # . . . . . . |\n| # . . @ . . . |\n| # . . . . . . |\n| # . . . . . . |\n| # . . . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • sign — 2 tile(s) north\n\n[Navigation / Pathfinding Hints]\n  • red gem — 14 steps away (shortest next move: move east)\n\n[Inventory] empty\n\n[Task]   [✗] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "Continuing east through the West Room.",
+      "action": "move east",
+      "result": "You move east. You are now in the West Room.",
+      "success": true,
+      "agent_position": {
+        "x": 4,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": false,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 4,
+      "observation": "═══ Step 3/100 ═══\n\n[Last Action Result] ✓ You move east. You are now in the West Room.\n\n[Location] Position (4, 5) in \"West Room\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n| . . . . . . . |\n| . . ! . . . . |\n| . . . . . . . |\n| . . . @ . . . |\n| . . . . . . . |\n| . . . . . . . |\n| . . . . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • sign — 2 tile(s) north-west\n\n[Navigation / Pathfinding Hints]\n  • red gem — 13 steps away (shortest next move: move east)\n\n[Inventory] empty\n\n[Task]   [✗] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "I see the sign to my north. Let me continue east toward the passage to the East Room.",
+      "action": "move east",
+      "result": "You move east. You are now in the West Room.",
+      "success": true,
+      "agent_position": {
+        "x": 5,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": false,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 5,
+      "observation": "═══ Step 4/100 ═══\n\n[Last Action Result] ✓ You move east. You are now in the West Room.\n\n[Location] Position (5, 5) in \"West Room\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n| . . . . . . . |\n| . ! . . . . . |\n| . . . . . . . |\n| . . . @ . . . |\n| . . . . . . . |\n| . . . . . . . |\n| . . . . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • sign — 2 tile(s) north-west\n\n[Navigation / Pathfinding Hints]\n  • red gem — 12 steps away (shortest next move: move east)\n\n[Inventory] empty\n\n[Task]   [✗] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "Moving east. The dividing wall should be ahead with a passage.",
+      "action": "move east",
+      "result": "You move east. You are now in the West Room.",
+      "success": true,
+      "agent_position": {
+        "x": 6,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": false,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 6,
+      "observation": "═══ Step 5/100 ═══\n\n[Last Action Result] ✓ You move east. You are now in the West Room.\n\n[Location] Position (6, 5) in \"West Room\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n| . . . . . . # |\n| ! . . . . . # |\n| . . . . . . # |\n| . . . @ . . . |\n| . . . . . . # |\n| . . . . . . # |\n| . . . . . . # |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • sign — 3 tile(s) north-west\n\n[Navigation / Pathfinding Hints]\n  • red gem — 11 steps away (shortest next move: move east)\n\n[Inventory] empty\n\n[Task]   [✗] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "Continuing east through the West Room. Getting closer to the passage.",
+      "action": "move east",
+      "result": "You move east. You are now in the West Room.",
+      "success": true,
+      "agent_position": {
+        "x": 7,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": false,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 7,
+      "observation": "═══ Step 6/100 ═══\n\n[Last Action Result] ✓ You move east. You are now in the West Room.\n\n[Location] Position (7, 5) in \"West Room\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n| . . . . . #   |\n| . . . . . #   |\n| . . . . . #   |\n| . . . @ . . . |\n| . . . . . #   |\n| . . . . . #   |\n| . . . . . #   |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • sign — 4 tile(s) north-west\n\n[Navigation / Pathfinding Hints]\n  • red gem — 10 steps away (shortest next move: move east)\n\n[Inventory] empty\n\n[Task]   [✗] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "I'm near the east wall of the West Room. The passage should be right here.",
+      "action": "move east",
+      "result": "You move east. You are now in the West Room.",
+      "success": true,
+      "agent_position": {
+        "x": 8,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": false,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 8,
+      "observation": "═══ Step 7/100 ═══\n\n[Last Action Result] ✓ You move east. You are now in the West Room.\n\n[Location] Position (8, 5) in \"West Room\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n| . . . .       |\n| . . . . #     |\n| . . . . # . . |\n| . . . @ . . . |\n| . . . . # . . |\n| . . . . #     |\n| . . . .       |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • sign — 5 tile(s) north-west\n\n[Navigation / Pathfinding Hints]\n  • red gem — 9 steps away (shortest next move: move east)\n\n[Inventory] empty\n\n[Task]   [✗] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "Moving through the passage in the dividing wall. I'm crossing into the East Room.",
+      "action": "move east",
+      "result": "You move east.",
+      "success": true,
+      "agent_position": {
+        "x": 9,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": false,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 9,
+      "observation": "═══ Step 8/100 ═══\n\n[Last Action Result] ✓ You move east.\n\n[Location] Position (9, 5) in \"Unknown area\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n| . .       . . |\n| . .       . . |\n| . . . # . . . |\n| . . . @ . . . |\n| . . . # . . . |\n| . .       . . |\n| . .       . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities] Nothing notable in sight.\n\n[Navigation / Pathfinding Hints]\n  • red gem — 8 steps away (shortest next move: move east)\n\n[Inventory] empty\n\n[Task]   [✗] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "I'm entering the East Room now. The red gem should be somewhere in here. Let me continue exploring.",
+      "action": "move east",
+      "result": "You move east. You are now in the East Room.",
+      "success": true,
+      "agent_position": {
+        "x": 10,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": true,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 10,
+      "observation": "═══ Step 9/100 ═══\n\n[Last Action Result] ✓ You move east. You are now in the East Room.\n\n[Location] Position (10, 5) in \"East Room\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n|       . . . . |\n|     # . . . . |\n| . . # . . . . |\n| . . . @ . . . |\n| . . # . . . . |\n|     # . . . . |\n|       . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • red gem — 5 tile(s) north-east\n\n[Navigation / Pathfinding Hints]\n  • red gem — 7 steps away (shortest next move: move north)\n\n[Inventory] empty\n\n[Task]   [✓] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "I'm in the East Room. The red gem is at position (15,3). I need to move further east and then north.",
+      "action": "move east",
+      "result": "You move east. You are now in the East Room.",
+      "success": true,
+      "agent_position": {
+        "x": 11,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": true,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 11,
+      "observation": "═══ Step 10/100 ═══\n\n[Last Action Result] ✓ You move east. You are now in the East Room.\n\n[Location] Position (11, 5) in \"East Room\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n|   # . . . . . |\n|   # . . . . . |\n|   # . . . . . |\n| . . . @ . . . |\n|   # . . . . . |\n|   # . . . . . |\n|   # . . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • red gem — 4 tile(s) north-east\n\n[Navigation / Pathfinding Hints]\n  • red gem — 6 steps away (shortest next move: move north)\n\n[Inventory] empty\n\n[Task]   [✓] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "Getting closer to the gem's location. Continuing east.",
+      "action": "move east",
+      "result": "You move east. You are now in the East Room.",
+      "success": true,
+      "agent_position": {
+        "x": 12,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": true,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 12,
+      "observation": "═══ Step 11/100 ═══\n\n[Last Action Result] ✓ You move east. You are now in the East Room.\n\n[Location] Position (12, 5) in \"East Room\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n| # . . . . . . |\n| # . . . . . G |\n| # . . . . . . |\n| . . . @ . . . |\n| # . . . . . . |\n| # . . . . . . |\n| # . . . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • red gem — 3 tile(s) north-east\n\n[Navigation / Pathfinding Hints]\n  • red gem — 5 steps away (shortest next move: move north)\n\n[Inventory] empty\n\n[Task]   [✓] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "Moving east in the East Room. Almost directly south of the gem.",
+      "action": "move east",
+      "result": "You move east. You are now in the East Room.",
+      "success": true,
+      "agent_position": {
+        "x": 13,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": true,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 13,
+      "observation": "═══ Step 12/100 ═══\n\n[Last Action Result] ✓ You move east. You are now in the East Room.\n\n[Location] Position (13, 5) in \"East Room\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n| . . . . . . . |\n| . . . . . G . |\n| . . . . . . . |\n| . . . @ . . . |\n| . . . . . . . |\n| . . . . . . . |\n| . . . . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • red gem — 2 tile(s) north-east\n\n[Navigation / Pathfinding Hints]\n  • red gem — 4 steps away (shortest next move: move north)\n\n[Inventory] empty\n\n[Task]   [✓] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "I'm at x=14. The gem should be at x=15, y=3. One more step east.",
+      "action": "move east",
+      "result": "You move east. You are now in the East Room.",
+      "success": true,
+      "agent_position": {
+        "x": 14,
+        "y": 5
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": true,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 14,
+      "observation": "═══ Step 13/100 ═══\n\n[Last Action Result] ✓ You move east. You are now in the East Room.\n\n[Location] Position (14, 5) in \"East Room\" | Facing east\n\n[Vision — 7×7 local grid]\n+---------------+\n| . . . . . . . |\n| . . . . G . . |\n| . . . . . . . |\n| . . . @ . . . |\n| . . . . . . . |\n| . . . . . . . |\n| . . . . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • red gem — 2 tile(s) north-east\n\n[Navigation / Pathfinding Hints]\n  • red gem — 3 steps away (shortest next move: move north)\n\n[Inventory] empty\n\n[Task]   [✓] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn north, turn south, turn west, look, wait",
+      "thinking": "Good, I'm at x=15. Now I need to go north from y=5 to y=3. Moving north.",
+      "action": "move north",
+      "result": "You move north. You are now in the East Room.",
+      "success": true,
+      "agent_position": {
+        "x": 14,
+        "y": 4
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": true,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 15,
+      "observation": "═══ Step 14/100 ═══\n\n[Last Action Result] ✓ You move north. You are now in the East Room.\n\n[Location] Position (14, 4) in \"East Room\" | Facing north\n\n[Vision — 7×7 local grid]\n+---------------+\n| . . . . . . . |\n| . . . . . . . |\n| . . . . G . . |\n| . . . @ . . . |\n| . . . . . . . |\n| . . . . . . . |\n| . . . . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • red gem — 1 tile(s) north-east\n\n[Navigation / Pathfinding Hints]\n  • red gem — 2 steps away (shortest next move: move north)\n\n[Inventory] empty\n\n[Task]   [✓] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn south, turn east, turn west, look, wait",
+      "thinking": "Almost there. One more step north to reach the gem at y=3.",
+      "action": "move north",
+      "result": "You move north. You are now in the East Room.",
+      "success": true,
+      "agent_position": {
+        "x": 14,
+        "y": 3
+      },
+      "inventory": [],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": true,
+          "Pick up the red gem": false
+        },
+        "completed": false,
+        "message": ""
+      }
+    },
+    {
+      "step": 16,
+      "observation": "═══ Step 15/100 ═══\n\n[Last Action Result] ✓ You move north. You are now in the East Room.\n\n[Location] Position (14, 3) in \"East Room\" | Facing north\n\n[Vision — 7×7 local grid]\n+---------------+\n| # # # # # # # |\n| . . . . . . . |\n| . . . . . . . |\n| . . . @ G . . |\n| . . . . . . . |\n| . . . . . . . |\n| . . . . . . . |\n+---------------+\n  Legend: @ = you, # = wall, . = floor, ~ = water, K = key, D = locked door, d = open door, G = gem, S = switch, ! = sign, ★ = goal\n\n[Visible Entities]\n  • red gem — 1 tile(s) east\n\n[Navigation / Pathfinding Hints]\n  • red gem — 1 steps away (shortest next move: move east)\n\n[Adjacent / Interactable]\n  • red gem — east\n\n[Inventory] empty\n\n[Task]   [✓] Reach the East Room\n  [✗] Pick up the red gem\n\n[Valid Actions] move north, move south, move east, move west, turn south, turn east, turn west, look, pickup red gem, wait",
+      "thinking": "I can see the red gem right here! Let me pick it up.",
+      "action": "pickup red gem",
+      "result": "You pick up the red gem. It gleams brightly.",
+      "success": true,
+      "agent_position": {
+        "x": 14,
+        "y": 3
+      },
+      "inventory": [
+        "red gem"
+      ],
+      "task_progress": {
+        "objectives": {
+          "Reach the East Room": true,
+          "Pick up the red gem": true
+        },
+        "completed": true,
+        "message": "Congratulations! You found and collected the red gem!"
+      }
+    }
+  ]
+}
