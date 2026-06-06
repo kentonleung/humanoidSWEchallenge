@@ -22,15 +22,6 @@ pip install -r requirements.txt
 ```bash
 # Cerebras (zai-glm-4.7) — Default & Recommended (Free, Generous Tokens)
 export CEREBRAS_API_KEY="csk-..."
-
-# OR Anthropic (Claude)
-export ANTHROPIC_API_KEY="sk-ant-..."
-
-# OR OpenAI (GPT)
-export OPENAI_API_KEY="sk-..."
-
-# OR Google Gemini
-export GEMINI_API_KEY="AIza..."
 ```
 
 ### 3. Run the Agent
@@ -90,7 +81,7 @@ llmChallenge/
 
 The architecture is deliberately modular — each component is independent and swappable:
 
-- **Swap the LLM**: Change `AnthropicProvider` to `OpenAIProvider` with one flag
+- **Swap the LLM**: The architecture is modular. While configured for Cerebras by default, you can easily plug in other providers (like OpenAI or Anthropic) by implementing the `LLMProvider` interface, as demonstrated in `harness/llm_agent.py`.
 - **Change the world**: Modify `world.py` without touching the harness
 - **Adjust observations**: Edit `observations.py` without changing the agent loop
 - **Add actions**: Extend `actions.py` and `environment.py` independently
@@ -260,24 +251,17 @@ The visualizer shows:
 | Environment Variable | Description |
 |---------------------|-------------|
 | `CEREBRAS_API_KEY` | Cerebras API key (default provider) |
-| `ANTHROPIC_API_KEY` | Anthropic API key for Claude |
-| `OPENAI_API_KEY` | OpenAI API key for GPT |
-| `GEMINI_API_KEY` | Google API key for Gemini |
 
 | CLI Flag | Description | Default |
 |----------|-------------|---------|
 | `--task` | Task to run | (required) |
-| `--provider` | `cerebras`, `gemini`, `anthropic`, or `openai` | `cerebras` |
-| `--model` | Model name | Provider default |
+| `--provider` | `cerebras` | `cerebras` |
+| `--model` | Model name | `zai-glm-4.7` |
 | `--web` | Start web visualizer | `false` |
 | `--port` | Web server port | `8000` |
 | `--all` | Run all tasks | `false` |
 
-> **Note — API Testing Disclaimer:** This environment was developed and tested using the **Cerebras API** (specifically the `zai-glm-4.7` model). This provider was chosen because it is free to sign up for and offers generous token limits, which is essential for running autonomous agent loops without significant API costs.
->
-> The Google Gemini, Anthropic Claude, and OpenAI GPT provider classes (`harness/llm_agent.py`) were written according to their standard SDK specifications but have **not been locally tested** due to a lack of API keys. If you choose to run with `--provider openai`, `--provider anthropic`, or `--provider gemini` and encounter integration errors, you are encouraged to inspect and adjust those specific provider classes to match your local SDK version.
 
----
 
 ## License
 

@@ -10,7 +10,7 @@ Run the agent from the command line:
 
 Options:
     --task          Task to run: navigate, key_door, dungeon_escape
-    --provider      LLM provider: cerebras (default), gemini, anthropic, openai
+    --provider      LLM provider: cerebras (default)
     --model         Model name (default: zai-glm-4.7)
     --web           Start the web visualization server
     --headless      Run without web server, console output only
@@ -150,8 +150,7 @@ def main():
         epilog="""
 Examples:
   python main.py --task navigate                    Run the navigation task (Cerebras)
-  python main.py --task key_door --provider openai  Use OpenAI GPT
-  python main.py --task navigate --provider anthropic  Use Anthropic Claude
+  python main.py --task key_door                    Run the medium task
   python main.py --web                              Launch web visualizer
   python main.py --all                              Run all tasks
         """,
@@ -164,7 +163,7 @@ Examples:
     )
     parser.add_argument(
         "--provider",
-        choices=["cerebras", "gemini", "anthropic", "openai"],
+        choices=["cerebras"],
         default="cerebras",
         help="LLM provider (default: cerebras)",
     )
