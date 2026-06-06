@@ -246,7 +246,8 @@ The visualizer shows:
 - **Inventory**: Current items
 
 ### Replay Demo (Dungeon Escape)
-<video src="assets/demo.webm" controls="controls" width="100%"></video>
+
+https://github.com/kentonleung/humanoidSWEchallenge/raw/main/assets/demo.webm
 
 > **A Note on Video Playback Speed & Rate Limits:**
 > If you watch the full replay video, you might notice the agent's actions slow down significantly towards the end of the run. Because this environment uses the free Cerebras API, I am subject to strict requests-per-minute (RPM) and token rate limits. During the long `dungeon_escape` task, the agent exhausted its initial token burst. However, my harness gracefully catches `429 RateLimitError` exceptions and implements an exponential backoff, allowing the agent to slowly regenerate tokens and successfully finish the run without crashing.
