@@ -131,7 +131,7 @@ Natural language descriptions provide named entities, distances, and states that
 ```
 [Valid Actions] move north, move east, pickup blue key, look, wait
 ```
-**This is critical.** By providing only valid actions, we eliminate a huge class of LLM errors (invalid movements, picking up non-existent items). The LLM selects from a menu rather than generating free-form commands.
+**This is critical.** By providing only valid actions, I eliminate a huge class of LLM errors (invalid movements, picking up non-existent items). The LLM selects from a menu rather than generating free-form commands.
 
 #### 4. Task Progress
 ```
@@ -177,7 +177,7 @@ ACTION: move north
 
 ### What Didn't Work
 
-1. **Active Chasing Monsters**: We originally tried making monsters actively chase the agent. However, LLMs struggle heavily with dynamic spatial-temporal lookahead (adversarial pathfinding on a 2D grid). The agent would get caught constantly, forcing us to downgrade monsters to "blind roamers" (acting as dynamic environmental hazards instead).
+1. **Active Chasing Monsters**: I originally tried making monsters actively chase the agent. However, LLMs struggle heavily with dynamic spatial-temporal lookahead (adversarial pathfinding on a 2D grid). The agent would get caught constantly, forcing me to downgrade monsters to "blind roamers" (acting as dynamic environmental hazards instead).
 
 ### What Could Be Improved
 
@@ -245,8 +245,11 @@ The visualizer shows:
 - **Task Progress**: Live objective tracking
 - **Inventory**: Current items
 
+### Replay Demo (Dungeon Escape)
+<video src="assets/demo.webm" controls="controls" width="100%"></video>
+
 > **A Note on Video Playback Speed & Rate Limits:**
-> If you watch the full replay video, you might notice the agent's actions slow down significantly towards the end of the run. Because this environment uses the free Cerebras API, we are subject to strict requests-per-minute (RPM) and token rate limits. During the long `dungeon_escape` task, the agent exhausted its initial token burst. However, our harness gracefully catches `429 RateLimitError` exceptions and implements an exponential backoff, allowing the agent to slowly regenerate tokens and successfully finish the run without crashing.
+> If you watch the full replay video, you might notice the agent's actions slow down significantly towards the end of the run. Because this environment uses the free Cerebras API, I am subject to strict requests-per-minute (RPM) and token rate limits. During the long `dungeon_escape` task, the agent exhausted its initial token burst. However, my harness gracefully catches `429 RateLimitError` exceptions and implements an exponential backoff, allowing the agent to slowly regenerate tokens and successfully finish the run without crashing.
 
 ---
 
