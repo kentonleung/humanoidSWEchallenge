@@ -1,3 +1,4 @@
+[demo.webm](https://github.com/user-attachments/assets/62b2651e-ec02-4fa3-a168-fae187cee0a3)
 # LLM Agent in a Virtual World
 
 An LLM-powered agent that navigates a 2D dungeon, perceives its environment through structured observations, reasons about its situation, and takes discrete actions to accomplish goal-directed tasks.
@@ -247,7 +248,8 @@ The visualizer shows:
 
 ### Replay Demo (Dungeon Escape)
 
-https://github.com/kentonleung/humanoidSWEchallenge/raw/main/assets/demo.webm
+[demo.webm](https://github.com/user-attachments/assets/224be054-3897-4c64-afe0-0cfe6d178d6c)
+
 
 > **A Note on Video Playback Speed & Rate Limits:**
 > If you watch the full replay video, you might notice the agent's actions slow down significantly towards the end of the run. Because this environment uses the free Cerebras API, I am subject to strict requests-per-minute (RPM) and token rate limits. During the long `dungeon_escape` task, the agent exhausted its initial token burst. However, my harness gracefully catches `429 RateLimitError` exceptions and implements an exponential backoff, allowing the agent to slowly regenerate tokens and successfully finish the run without crashing.
