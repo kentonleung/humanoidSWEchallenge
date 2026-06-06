@@ -1,9 +1,8 @@
-[demo.webm](https://github.com/user-attachments/assets/62b2651e-ec02-4fa3-a168-fae187cee0a3)
 # LLM Agent in a Virtual World
 
-An LLM-powered agent that navigates a 2D dungeon, perceives its environment through structured observations, reasons about its situation, and takes discrete actions to accomplish goal-directed tasks.
+This project explores the design of an intelligent agent **harness** — the critical interface layer between a Large Language Model and a virtual world. It tackles core architectural challenges like dual-modality observation representation, strict action-space constraints, structured chain-of-thought parsing, and infinite loop detection.
 
-**Focus**: The agent **harness** — the interface between the LLM and the virtual world — with a real-time web visualizer to watch the agent think and act.
+While the agent's current testbed is a custom 2D dungeon, the primary focus is on building a robust, predictable pipeline for LLMs to perceive, reason, and act within a structured environment. The project includes a real-time web visualizer to watch the agent's reasoning loop in action.
 
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![License MIT](https://img.shields.io/badge/License-MIT-green)
